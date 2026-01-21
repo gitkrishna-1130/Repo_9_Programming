@@ -1,0 +1,38 @@
+what the shebang line means (in your own words)
+
+In my own words, the shebang (#!/usr/bin/env python3) is like a "direction sign" at the very beginning of a script. It tells the computer's operating system exactly which program it should use to read and run the code inside that file. Without it, the computer might try to run the file as a generic text or shell script and fail. By adding this line, I am telling the system: "Go find the Python 3 interpreter and let it handle this."
+             
+How I executed hello.py without using python
+
+To run the script directly (using ./hello.py instead of python3 hello.py), I followed these two steps in the Code-OSS terminal:
+
+Changed Permissions: I used the command chmod +x hello.py. This tells the computer that this specific file is allowed to be "executed" as a program rather than just read as a text document.
+
+Direct Execution: Once the permission was set, I typed ./hello.py. The dot and slash (./) tell the terminal to look for the file in the current folder and run it. Because of the shebang line I added earlier, the computer automatically knew to use Python to finish the task.
+
+Why Python can run directly but C requires compilation first
+
+The reason Python and C behave differently comes down to how your computer understands the instructions you write. Computers can only speak in "machine code" (1s and 0s). Python and C use two different methods—interpreting and compiling—to translate your human-readable text into those 1s and 0s.
+
+Mention the difference between an interpreter and a compiler in your explanation
+
+The Compiler (C)
+
+C is a compiled language. When you wrote your hello.c file, the computer couldn't run it immediately because the file was just a text document.
+
+How it works: You use a program called a compiler (like gcc) to read your entire hello.c file at once.
+
+The Output: The compiler translates all that code into a separate, permanent "binary" or "executable" file (like the hello file you created).
+
+Execution: Once compiled, you run the binary file directly. The computer doesn't need to look at your source code again because the translation is already finished.
+
+The Interpreter (Python)
+
+Python is an interpreted language. When you run ./hello.py, it feels like it’s running "directly," but there is actually a translation happening in the background every single time.
+
+How it works: An interpreter (the python3 program) reads your code line-by-line.
+
+The Output: It does not create a separate executable file. Instead, it reads the first line, translates it to machine code, and runs it immediately; then it moves to the second line, and so on.
+
+Execution: This makes the "start" process feel faster for the programmer because you don't have to wait for a compilation step, but the program itself usually runs slower than a compiled C program.
+
